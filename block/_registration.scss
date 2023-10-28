@@ -1,0 +1,101 @@
+.registration {
+    display: flex;
+    justify-content: space-between;
+    margin: 64px auto 96px auto;
+    &__form{
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        & h4 {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+        }
+        &__textbox {
+            margin: 20px 0 0 0;
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #A4A4A4;
+        }
+        & input::placeholder {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+        }
+        &__radio {
+            margin: 31px 0;
+            display: flex;
+            & label {
+                cursor: pointer;
+                & input {
+                    height: 17px;
+                    width: 17px;
+                    cursor: pointer;
+                }
+                
+            }
+            & label:last-child {
+                margin: 0 0 0 20px;
+            }
+        }
+        & p {
+            margin: 15px 0 0 0;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+        }
+        & a {
+            background: $mainColor;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 17px 29px;
+            margin: 39px auto 0 0;
+        }
+    }
+    &__perks {
+        margin: 0 0 0 22px;
+        max-width: 652px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        &__header {
+            margin: 0 0 22px 0;
+        }
+        & li {
+            margin: 21px 0 0 43px;
+            list-style-image: url(/img/list.svg);
+        }
+    }
+}
+
+@media (max-width:768px){
+    .registration {
+        &__perks {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+
+
+@media (max-width:700px){
+    .registration {
+        flex-direction: column;
+        align-items: center;
+        &__perks {
+            margin: 40px 0;
+        }
+    }
+}

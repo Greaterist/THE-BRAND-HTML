@@ -1,0 +1,93 @@
+.header{
+    background: #222222;
+    &__block {
+        padding: 18px 10px 19px;
+        display: flex;
+        justify-content: space-between;
+        &__left {
+            align-items: center;
+            display: flex;
+        }
+        &__right {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    &__logo {
+        margin-right: 33px;
+    }
+    &__nav{
+        & label {
+            cursor: pointer;
+        }
+        &__menu {
+            display: none;
+            top: 79px;
+            right: 0px;
+            color: white;
+            width: 232px;
+            height: calc(100vh - 79px);
+            background: #FFFFFF;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            position: absolute;
+            overflow-y: auto;
+            &__close {
+                position: absolute;
+                right: 16px;
+                top: 17px;
+            }
+            & h3 {
+                margin: 37px 0 0 34px;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+            & h4 {
+                margin: 24px 0 0 34px;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #F16D7F;
+            }
+            & ul {
+                & li {
+                    margin: 21px 0 0 55px;
+                }
+            }
+            & a {
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__nav:not(:last-child) {
+        margin-right: 33px;
+    }
+}
+
+#menu {
+    display: none;
+}
+#menu:checked ~.header__nav__menu{
+    display: block;
+}
+
+@media (max-width:400px){
+    .header{
+        &__nav:not(:first-child){
+            display: none;
+        }
+    }
+}
